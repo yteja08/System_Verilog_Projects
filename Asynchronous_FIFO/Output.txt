@@ -1,0 +1,282 @@
+[2026-10-05 09:02:22 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
+TOOL:	xrun	25.03-s001: Started on Oct 05, 2026 at 05:02:22 EDT
+xrun: 25.03-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+            #1step;
+                 |
+xmvlog: *W,SAWSTP (monitor.sv,53|17): Time unit "step" seen in literal - using local precision.
+	Top level design units:
+		$unit_0x3a47881d
+		async_fifo_tb
+Loading snapshot worklib.async_fifo_tb:sv .................... Done
+SVSEED default: 1
+xcelium> source /xcelium25.03/tools/xcelium/files/xmsimrc
+xcelium> run
+[GEN] Time=20 w_en=1 r_en=0 data_in=8d
+[DRV/WRITE] Time=20 w_en=1 data_in=8d
+[MON-WRITE] Time=25 | data_in=8d | full=0
+[SCB-WRITE] Time=25 | Stored=8d | Queue Size=1
+WRITE: time=25 | wptr=0 | address=0 | data=8d
+
+[GEN] Time=30 w_en=1 r_en=0 data_in=94
+[DRV/WRITE] Time=40 w_en=1 data_in=94
+[MON-WRITE] Time=45 | data_in=94 | full=0
+[SCB-WRITE] Time=45 | Stored=94 | Queue Size=2
+WRITE: time=45 | wptr=1 | address=1 | data=94
+
+[GEN] Time=50 w_en=1 r_en=0 data_in=f0
+[DRV/WRITE] Time=60 w_en=1 data_in=f0
+[MON-WRITE] Time=65 | data_in=f0 | full=0
+[SCB-WRITE] Time=65 | Stored=f0 | Queue Size=3
+WRITE: time=65 | wptr=2 | address=2 | data=f0
+
+[GEN] Time=70 w_en=0 r_en=1 data_in=6c
+[DRV/READ] Time=84 r_en=1
+READ : time=91 | rptr=0 | address=0 | data=8d
+[MON-READ] Time=92 | data_out=8d |read_valid=1
+[SCB-READ] Time=92 | Expected=8d | Actual=8d | PASS
+
+[GEN] Time=98 w_en=1 r_en=0 data_in=bf
+[DRV/WRITE] Time=100 w_en=1 data_in=bf
+[MON-WRITE] Time=105 | data_in=bf | full=0
+[SCB-WRITE] Time=105 | Stored=bf | Queue Size=3
+WRITE: time=105 | wptr=3 | address=3 | data=bf
+
+[GEN] Time=110 w_en=1 r_en=1 data_in=22
+[DRV/READ] Time=112 r_en=1
+READ : time=119 | rptr=1 | address=1 | data=94
+[MON-READ] Time=120 | data_out=94 |read_valid=1
+[DRV/WRITE] Time=120 w_en=1 data_in=22
+[SCB-READ] Time=120 | Expected=94 | Actual=94 | PASS
+[MON-WRITE] Time=125 | data_in=22 | full=0
+[SCB-WRITE] Time=125 | Stored=22 | Queue Size=3
+WRITE: time=125 | wptr=4 | address=4 | data=22
+
+[GEN] Time=130 w_en=0 r_en=1 data_in=7f
+[DRV/READ] Time=140 r_en=1
+READ : time=147 | rptr=2 | address=2 | data=f0
+[MON-READ] Time=148 | data_out=f0 |read_valid=1
+[SCB-READ] Time=148 | Expected=f0 | Actual=f0 | PASS
+
+[GEN] Time=154 w_en=0 r_en=1 data_in=db
+[DRV/READ] Time=168 r_en=1
+READ : time=175 | rptr=3 | address=3 | data=bf
+[MON-READ] Time=176 | data_out=bf |read_valid=1
+[SCB-READ] Time=176 | Expected=bf | Actual=bf | PASS
+
+[GEN] Time=182 w_en=0 r_en=1 data_in=3a
+[DRV/READ] Time=196 r_en=1
+READ : time=203 | rptr=4 | address=4 | data=22
+[MON-READ] Time=204 | data_out=22 |read_valid=1
+[SCB-READ] Time=204 | Expected=22 | Actual=22 | PASS
+
+[GEN] Time=210 w_en=0 r_en=1 data_in=05
+[DRV/READ] Time=224 r_en=1
+[GEN] Time=238 w_en=1 r_en=0 data_in=17
+[DRV/WRITE] Time=240 w_en=1 data_in=17
+[MON-WRITE] Time=245 | data_in=17 | full=0
+[SCB-WRITE] Time=245 | Stored=17 | Queue Size=1
+WRITE: time=245 | wptr=5 | address=5 | data=17
+
+[GEN] Time=250 w_en=1 r_en=0 data_in=2a
+[DRV/WRITE] Time=260 w_en=1 data_in=2a
+[MON-WRITE] Time=265 | data_in=2a | full=0
+[SCB-WRITE] Time=265 | Stored=2a | Queue Size=2
+WRITE: time=265 | wptr=6 | address=6 | data=2a
+
+[GEN] Time=270 w_en=1 r_en=0 data_in=00
+[DRV/WRITE] Time=280 w_en=1 data_in=00
+[MON-WRITE] Time=285 | data_in=0 | full=0
+[SCB-WRITE] Time=285 | Stored=0 | Queue Size=3
+WRITE: time=285 | wptr=7 | address=7 | data=00
+
+[GEN] Time=290 w_en=1 r_en=0 data_in=88
+[DRV/WRITE] Time=300 w_en=1 data_in=88
+[MON-WRITE] Time=305 | data_in=88 | full=0
+[SCB-WRITE] Time=305 | Stored=88 | Queue Size=4
+WRITE: time=305 | wptr=8 | address=0 | data=88
+
+[GEN] Time=310 w_en=0 r_en=1 data_in=4f
+[DRV/READ] Time=322 r_en=1
+READ : time=329 | rptr=5 | address=5 | data=17
+[MON-READ] Time=330 | data_out=17 |read_valid=1
+[SCB-READ] Time=330 | Expected=17 | Actual=17 | PASS
+
+[GEN] Time=336 w_en=0 r_en=1 data_in=f4
+[DRV/READ] Time=350 r_en=1
+READ : time=357 | rptr=6 | address=6 | data=2a
+[MON-READ] Time=358 | data_out=2a |read_valid=1
+[SCB-READ] Time=358 | Expected=2a | Actual=2a | PASS
+
+[GEN] Time=364 w_en=1 r_en=0 data_in=5b
+[DRV/WRITE] Time=370 w_en=1 data_in=5b
+[MON-WRITE] Time=375 | data_in=5b | full=0
+[SCB-WRITE] Time=375 | Stored=5b | Queue Size=3
+WRITE: time=375 | wptr=9 | address=1 | data=5b
+
+[GEN] Time=380 w_en=1 r_en=0 data_in=9f
+[DRV/WRITE] Time=390 w_en=1 data_in=9f
+[MON-WRITE] Time=395 | data_in=9f | full=0
+[SCB-WRITE] Time=395 | Stored=9f | Queue Size=4
+WRITE: time=395 | wptr=10 | address=2 | data=9f
+
+[GEN] Time=400 w_en=0 r_en=1 data_in=06
+[DRV/READ] Time=406 r_en=1
+READ : time=413 | rptr=7 | address=7 | data=00
+[MON-READ] Time=414 | data_out=0 |read_valid=1
+[SCB-READ] Time=414 | Expected=0 | Actual=0 | PASS
+
+[GEN] Time=420 w_en=1 r_en=0 data_in=c7
+[DRV/WRITE] Time=430 w_en=1 data_in=c7
+[MON-WRITE] Time=435 | data_in=c7 | full=0
+[SCB-WRITE] Time=435 | Stored=c7 | Queue Size=4
+WRITE: time=435 | wptr=11 | address=3 | data=c7
+
+[GEN] Time=440 w_en=0 r_en=1 data_in=6e
+[DRV/READ] Time=448 r_en=1
+READ : time=455 | rptr=8 | address=0 | data=88
+[MON-READ] Time=456 | data_out=88 |read_valid=1
+[SCB-READ] Time=456 | Expected=88 | Actual=88 | PASS
+
+[GEN] Time=462 w_en=0 r_en=1 data_in=0c
+[DRV/READ] Time=476 r_en=1
+READ : time=483 | rptr=9 | address=1 | data=5b
+[MON-READ] Time=484 | data_out=5b |read_valid=1
+[SCB-READ] Time=484 | Expected=5b | Actual=5b | PASS
+
+[GEN] Time=490 w_en=1 r_en=0 data_in=4c
+[DRV/WRITE] Time=500 w_en=1 data_in=4c
+[MON-WRITE] Time=505 | data_in=4c | full=0
+[SCB-WRITE] Time=505 | Stored=4c | Queue Size=3
+WRITE: time=505 | wptr=12 | address=4 | data=4c
+
+[GEN] Time=510 w_en=1 r_en=0 data_in=82
+[DRV/WRITE] Time=520 w_en=1 data_in=82
+[MON-WRITE] Time=525 | data_in=82 | full=0
+[SCB-WRITE] Time=525 | Stored=82 | Queue Size=4
+WRITE: time=525 | wptr=13 | address=5 | data=82
+
+[GEN] Time=530 w_en=0 r_en=1 data_in=4b
+[DRV/READ] Time=532 r_en=1
+READ : time=539 | rptr=10 | address=2 | data=9f
+[MON-READ] Time=540 | data_out=9f |read_valid=1
+[SCB-READ] Time=540 | Expected=9f | Actual=9f | PASS
+
+[GEN] Time=546 w_en=0 r_en=1 data_in=9b
+[DRV/READ] Time=560 r_en=1
+READ : time=567 | rptr=11 | address=3 | data=c7
+[MON-READ] Time=568 | data_out=c7 |read_valid=1
+[SCB-READ] Time=568 | Expected=c7 | Actual=c7 | PASS
+
+[GEN] Time=574 w_en=0 r_en=1 data_in=38
+[DRV/READ] Time=588 r_en=1
+READ : time=595 | rptr=12 | address=4 | data=4c
+[MON-READ] Time=596 | data_out=4c |read_valid=1
+[SCB-READ] Time=596 | Expected=4c | Actual=4c | PASS
+
+[GEN] Time=602 w_en=0 r_en=1 data_in=60
+[DRV/READ] Time=616 r_en=1
+READ : time=623 | rptr=13 | address=5 | data=82
+[MON-READ] Time=624 | data_out=82 |read_valid=1
+[SCB-READ] Time=624 | Expected=82 | Actual=82 | PASS
+
+[GEN] Time=630 w_en=1 r_en=0 data_in=4f
+[DRV/WRITE] Time=640 w_en=1 data_in=4f
+[MON-WRITE] Time=645 | data_in=4f | full=0
+[SCB-WRITE] Time=645 | Stored=4f | Queue Size=1
+WRITE: time=645 | wptr=14 | address=6 | data=4f
+
+[GEN] Time=650 w_en=0 r_en=1 data_in=97
+[DRV/READ] Time=658 r_en=1
+[GEN] Time=672 w_en=1 r_en=0 data_in=50
+[DRV/WRITE] Time=680 w_en=1 data_in=50
+[MON-WRITE] Time=685 | data_in=50 | full=0
+[SCB-WRITE] Time=685 | Stored=50 | Queue Size=2
+WRITE: time=685 | wptr=15 | address=7 | data=50
+
+[GEN] Time=690 w_en=0 r_en=1 data_in=48
+[DRV/READ] Time=700 r_en=1
+READ : time=707 | rptr=14 | address=6 | data=4f
+[MON-READ] Time=708 | data_out=4f |read_valid=1
+[SCB-READ] Time=708 | Expected=4f | Actual=4f | PASS
+
+[GEN] Time=714 w_en=0 r_en=1 data_in=c6
+[DRV/READ] Time=728 r_en=1
+READ : time=735 | rptr=15 | address=7 | data=50
+[MON-READ] Time=736 | data_out=50 |read_valid=1
+[SCB-READ] Time=736 | Expected=50 | Actual=50 | PASS
+
+[GEN] Time=742 w_en=1 r_en=0 data_in=12
+[DRV/WRITE] Time=750 w_en=1 data_in=12
+[MON-WRITE] Time=755 | data_in=12 | full=0
+[SCB-WRITE] Time=755 | Stored=12 | Queue Size=1
+WRITE: time=755 | wptr=0 | address=0 | data=12
+
+[GEN] Time=760 w_en=1 r_en=0 data_in=c3
+[DRV/WRITE] Time=770 w_en=1 data_in=c3
+[MON-WRITE] Time=775 | data_in=c3 | full=0
+[SCB-WRITE] Time=775 | Stored=c3 | Queue Size=2
+WRITE: time=775 | wptr=1 | address=1 | data=c3
+
+[GEN] Time=780 w_en=0 r_en=1 data_in=dc
+[DRV/READ] Time=784 r_en=1
+[GEN] Time=798 w_en=0 r_en=1 data_in=7b
+[DRV/READ] Time=812 r_en=1
+READ : time=819 | rptr=0 | address=0 | data=12
+[MON-READ] Time=820 | data_out=12 |read_valid=1
+[SCB-READ] Time=820 | Expected=12 | Actual=12 | PASS
+
+[GEN] Time=826 w_en=0 r_en=1 data_in=8f
+[DRV/READ] Time=840 r_en=1
+READ : time=847 | rptr=1 | address=1 | data=c3
+[MON-READ] Time=848 | data_out=c3 |read_valid=1
+[SCB-READ] Time=848 | Expected=c3 | Actual=c3 | PASS
+
+[GEN] Time=854 w_en=0 r_en=1 data_in=da
+[DRV/READ] Time=868 r_en=1
+[GEN] Time=882 w_en=0 r_en=1 data_in=96
+[DRV/READ] Time=896 r_en=1
+[GEN] Time=910 w_en=1 r_en=0 data_in=02
+[DRV/WRITE] Time=920 w_en=1 data_in=02
+[MON-WRITE] Time=925 | data_in=2 | full=0
+[SCB-WRITE] Time=925 | Stored=2 | Queue Size=1
+WRITE: time=925 | wptr=2 | address=2 | data=02
+
+[GEN] Time=930 w_en=1 r_en=0 data_in=63
+[DRV/WRITE] Time=940 w_en=1 data_in=63
+[MON-WRITE] Time=945 | data_in=63 | full=0
+[SCB-WRITE] Time=945 | Stored=63 | Queue Size=2
+WRITE: time=945 | wptr=3 | address=3 | data=63
+
+[GEN] Time=950 w_en=1 r_en=0 data_in=52
+[DRV/WRITE] Time=960 w_en=1 data_in=52
+[MON-WRITE] Time=965 | data_in=52 | full=0
+[SCB-WRITE] Time=965 | Stored=52 | Queue Size=3
+WRITE: time=965 | wptr=4 | address=4 | data=52
+
+[GEN] Time=970 w_en=0 r_en=1 data_in=b6
+[DRV/READ] Time=980 r_en=1
+READ : time=987 | rptr=2 | address=2 | data=02
+[MON-READ] Time=988 | data_out=2 |read_valid=1
+[SCB-READ] Time=988 | Expected=2 | Actual=2 | PASS
+
+[GEN] Time=994 w_en=1 r_en=0 data_in=12
+[DRV/WRITE] Time=1000 w_en=1 data_in=12
+[MON-WRITE] Time=1005 | data_in=12 | full=0
+[SCB-WRITE] Time=1005 | Stored=12 | Queue Size=3
+WRITE: time=1005 | wptr=5 | address=5 | data=12
+
+======================================
+       ASYNC FIFO SCOREBOARD
+======================================
+Total Writes : 22
+Total Reads  : 19
+Errors       : 0
+Queue Left   : 3
+RESULT       : PASS
+======================================
+
+Simulation complete via $finish(1) at time 1020 NS + 0
+./testbench.sv:63     $finish;
+xcelium> exit
+TOOL:	xrun	25.03-s001: Exiting on Oct 05, 2026 at 05:02:24 EDT  (total: 00:00:02)
+Done
